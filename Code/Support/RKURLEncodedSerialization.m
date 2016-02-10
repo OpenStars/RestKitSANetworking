@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Support/RKURLEncodedSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKURLEncodedSerialization.h>
 
-#pragma mark - AFNetworking
+#pragma mark - SANetworking
 
-// Taken from https://github.com/AFNetworking/AFNetworking/blob/49f2f8c9a907977ec1b3afb182404ae0a6bce883/AFNetworking/AFURLRequestSerialization.m
+// Taken from https://github.com/SANetworking/SANetworking/blob/49f2f8c9a907977ec1b3afb182404ae0a6bce883/SANetworking/AFURLRequestSerialization.m
 
 static NSString * const RKAFCharactersToBeEscapedInQueryString = @":/?&=;+!@#$()',*";
 

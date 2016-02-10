@@ -19,11 +19,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RestKit/ObjectMapping/RKMappingOperation.h>
-#import <RestKit/ObjectMapping/RKMappingOperationDataSource.h>
-#import <RestKit/ObjectMapping/RKMappingResult.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/Support/RKErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingResult.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/Support/RKErrors.h>
 
 @protocol RKMapperOperationDelegate;
 

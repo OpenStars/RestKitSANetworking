@@ -1,6 +1,6 @@
 //
 //
-// lcl_RK.h -- LibComponentLogging, embedded, RestKit/RK
+// lcl_RK.h -- LibComponentLogging, embedded, RestKitSANetworking@MindSea/RK
 //
 //
 // Copyright (c) 2008-2012 Arne Harren <ah@0xc0.de>
@@ -31,10 +31,10 @@
 #define _RKLCL_VERSION_BUILD  1
 #define _RKLCL_VERSION_SUFFIX ""
 
-#import <RestKit/Support/lcl_config_components_RK.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_config_components_RK.h>
 
 //
-// lcl -- LibComponentLogging, embedded, RestKit/RK
+// lcl -- LibComponentLogging, embedded, RestKitSANetworking@MindSea/RK
 //
 // LibComponentLogging is a logging library for Objective-C applications
 // with the following characteristics:
@@ -324,7 +324,7 @@ enum {
 
 
 // Include logging back-end and definition of _RKlcl_logger.
-#import <RestKit/Support/lcl_config_logger_RK.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_config_logger_RK.h>
 
 
 // For simple configurations where 'lcl_config_logger_RK.h' is empty, define a
@@ -383,7 +383,7 @@ enum {
 
 
 // Include extensions.
-#import <RestKit/Support/lcl_config_extensions_RK.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_config_extensions_RK.h>
 
 
 #endif // __RKLCL_H__

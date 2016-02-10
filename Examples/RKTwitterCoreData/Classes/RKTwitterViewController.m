@@ -30,7 +30,7 @@ static void RKTwitterShowAlertWithError(NSError *error)
     [super viewDidLoad];
 
     // Set debug logging level. Set to 'RKLogLevelTrace' to see JSON payload
-    RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/Network", RKLogLevelDebug);
 
     // Setup View and Table View
     self.title = @"RestKit Tweets";

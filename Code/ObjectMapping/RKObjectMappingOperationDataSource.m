@@ -18,9 +18,9 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKMappingOperation.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingOperationDataSource.h>
 
 @implementation RKObjectMappingOperationDataSource
 

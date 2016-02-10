@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <RestKit/CoreData/RKConnectionDescription.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKConnectionDescription.h>
 
 static NSSet *RKSetWithInvalidAttributesForEntity(NSArray *attributes, NSEntityDescription *entity)
 {

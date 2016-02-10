@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-#import <RestKit/CoreData/NSManagedObjectContext+RKAdditions.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/CoreData/NSManagedObjectContext+RKAdditions.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 #import <objc/runtime.h>
 
 @implementation NSManagedObjectContext (RKAdditions)

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Support/RKNSJSONSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKNSJSONSerialization.h>
 
 @implementation RKNSJSONSerialization
 

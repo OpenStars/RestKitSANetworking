@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKPathMatcher.h>
-#import <RestKit/Network/RKRoute.h>
-#import <RestKit/Network/RKRouteSet.h>
-#import <RestKit/Network/RKRouter.h>
+#import <RestKitSANetworking@MindSea/Network/RKPathMatcher.h>
+#import <RestKitSANetworking@MindSea/Network/RKRoute.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouteSet.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouter.h>
 #import <objc/runtime.h>
 
 @interface RKRouter ()

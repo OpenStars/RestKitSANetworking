@@ -12,9 +12,9 @@ In this article we will continue our exploration of RestKit, an iOS framework fo
 
 ## Companion Example Code
 
-To aid the reader in following the concepts presented here, an accompanying example application is provided with the RestKit distribution. Each section of the tutorial will refer you to a specific example in the __RKCatalog__ example, found in the RestKit/Examples/RKCatalog directory. 
+To aid the reader in following the concepts presented here, an accompanying example application is provided with the RestKit distribution. Each section of the tutorial will refer you to a specific example in the __RKCatalog__ example, found in the RestKitSANetworking@MindSea/Examples/RKCatalog directory. 
 
-At the time of this writing, RestKit is currently at version *0.9.2*. Library source and example code can be downloaded from the [RestKit Downloads Page](https://github.com/twotoasters/RestKit/downloads).
+At the time of this writing, RestKit is currently at version *0.9.2*. Library source and example code can be downloaded from the [RestKit Downloads Page](https://github.com/twotoasters/RestKitSANetworking@MindSea/downloads).
 
 ## Advanced Networking
 
@@ -69,7 +69,7 @@ Now that we understand how RestKit coerces arbitrary objects into serializable r
 
 Essentially what we are doing here is creating a stack of RKParamsAttachment objects that are contained within the RKParams instance. With every call to `setValue`, `setFile`, or `setData` we are instantiating a new instance of RKParamsAttachment and adding it to the stack. Each of these methods returns the RKParamsAttachment object it has created for you so that you can further customize it if need be. We see this used to set the `MIMEType` and `fileName` properties for image. When we assign the params object to the RKRequest, it is serialized into a multipart/form-data document and read as a stream by the underlying NSURLConnection. This streaming behavior allows RKParams to be used for reading very large files off of disk without exhausting memory on an iOS device.
 
-**Example Code** - See [RKParamsExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKParamsExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKParamsExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKParamsExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ### The Request Queue
 
@@ -136,7 +136,7 @@ more granularly. For example, an ad-hoc queue could be useful for downloading or
 
 In this example we have created an ad-hoc queue that dispatches one request at a time and spins the system network activity indicator. There are a number of delegate methods available for the request queue to make managing groups of requests easier. Check out the RKRequestQueue example in RKCatalog for detailed examples. 
 
-**Example Code** - See [RKRequestQueueExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKRequestQueueExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKRequestQueueExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKRequestQueueExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ### Reachability
 
@@ -200,7 +200,7 @@ Now that we've seen how to initialize and work with RKReachabilityObserver, it's
 
     @end
 
-**Example Code** - See [RKReachabilityExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKReachabilityExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKReachabilityExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKReachabilityExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 We'll explore how RestKit leverages Reachability internally to provide transparent offline access in the Core Data object caching section.
 
@@ -220,7 +220,7 @@ RestKit seeks to ease this burden on the developer by providing simple, transpar
 
 The default policy is RKRequestBackgroundPolicyNone. Once you have set your policy and sent your request, RestKit handles the rest -- switching in and out of the app will cause the appropriate action to happen.
 
-**Example Code** - See [RKBackgroundRequestExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKBackgroundRequestExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKBackgroundRequestExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKBackgroundRequestExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ## Advanced Object Mapping
 
@@ -305,7 +305,7 @@ Now things are getting interesting. Note the new syntax utilized after the balan
 
 Taking advantage of key-value coding in your mappings becomes very useful when working with large, complex JSON payloads where you only care about a subset of the data. But sometimes we actually do care about all that extra information -- we just wish it was available in a more accessible format. In these circumstances we can instead turn to the use of relationship modeling to help RestKit transform a big data payload into an object graph.
 
-**Example Code** - See [RKKeyValueMappingExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKKeyValueMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKKeyValueMappingExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKKeyValueMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ### Modeling Relationships
 
@@ -410,7 +410,7 @@ This JSON collection is oriented around an array of Project models, with nested 
 
 Here we see the new invocation to elementToRelationshipMappings. If you glance back at the JSON structure, you can see that the declaration is instructing the object mapper to take the data contained in 'user' and 'tasks' sub-dictionaries, map them into objects, and assign the User and array of Task objects to the Project. When all of this has been completed, the object mapper will return the results and the complete object graph will be sent to your object loader delegate for processing.
 
-**Example Code** - See [RKRelationshipMappingExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKRelationshipMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKRelationshipMappingExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKRelationshipMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ## Persistence with Core Data
 
@@ -434,7 +434,7 @@ Enabling persistent object mapping is a relatively straight-forward process. It 
 1. libRKCoreData.a must be linked into your target
 1. Apple's CoreData.framework must be linked to your target
 1. A Data Model Resource must be added to your target and configured within Xcode
-1. The RestKit Core Data headers must be imported via `#import <RestKit/CoreData/CoreData.h>`
+1. The RestKit Core Data headers must be imported via `#import <RestKitSANetworking@MindSea/CoreData/CoreData.h>`
 1. An instance of RKManagedObjectStore must be configured and assigned to the object manager
 1. Persistent models inherit from RKManagedObject rather than RKObject
 1. A Primary Key property must be defined on each persistent model by implementing the `primaryKeyProperty` method
@@ -463,7 +463,7 @@ Now that we have a grounding in the basic requirements for adding Core Data to a
 First, we need to actually get RestKit and Core Data initialized. Open RKCDAppDelegate.m and note the following snippets of code:
     
     // Import RestKit's Core Data support
-    #import <RestKit/CoreData/CoreData.h>
+    #import <RestKitSANetworking@MindSea/CoreData/CoreData.h>
     
     RKObjectManager* manager = [RKObjectManager objectManagerWithBaseURL:@"http://restkit.org"];
     manager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"RKCoreDataExamples.sqlite"];
@@ -532,7 +532,7 @@ All of these methods are defined on RKManagedObject and provide short-cuts for f
 
 These Core Data helpers methods are used to drive a simple table view in the RKCoreDataExample in RKCatalog.
 
-**Example Code** - See [RKCoreDataExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKCoreDataExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKCoreDataExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKCoreDataExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ### Automagic Relationship Management
 
@@ -573,7 +573,7 @@ Note the `assigned_user_id` element in the payload -- this is the primary key va
 
 Note the definition of `relationshipToPrimaryKeyPropertyMappings` -- we have informed the mapper that the `assignedUserID` property contains the value of the primary key for the `assignedUser` relationship. When the mapper sees this, it will reflect on the relationship to determine it's type (in this case, a User) and assign `object.user = User.findByPrimaryKeyValue(object.assignedUserID)`. The target object must exist within the local data store or the relationship will be set to nil.
 
-**Example Code** - See [RKRelationshipMappingExample](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog/Examples/RKRelationshipMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKit/blob/master/Examples/RKCatalog)
+**Example Code** - See [RKRelationshipMappingExample](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog/Examples/RKRelationshipMappingExample) in [RKCatalog](https://github.com/twotoasters/RestKitSANetworking@MindSea/blob/master/Examples/RKCatalog)
 
 ### Going Offline: Using the Object Cache
 
@@ -717,7 +717,7 @@ We hope that you have found learning about RestKit fun and rewarding. At this po
 
 ## Learning More
 * RestKit: [http://restkit.org]()
-* Github: [https://github.com/RestKit/RestKit]()
-* API Docs: [http://cocoadocs.org/docsets/RestKit/]()
+* Github: [https://github.com/RestKitSANetworking@MindSea/RestKit]()
+* API Docs: [http://cocoadocs.org/docsets/RestKitSANetworking@MindSea/]()
 * Google Group: [http://groups.google.com/group/restkit]()
 * Brought to you by Two Toasters: [http://twotoasters.com/]()

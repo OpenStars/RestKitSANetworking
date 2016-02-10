@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import <RestKit/CoreData/RKEntityByAttributeCache.h>
-#import <RestKit/CoreData/RKEntityCache.h>
-#import <RestKit/CoreData/RKInMemoryManagedObjectCache.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKEntityByAttributeCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKEntityCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKInMemoryManagedObjectCache.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 
 // Set Logging Component
 #undef RKLogComponent

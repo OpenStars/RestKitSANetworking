@@ -20,10 +20,10 @@
 
 #import <RKValueTransformers/RKValueTransformers.h>
 
-#import <RestKit/ObjectMapping/RKAttributeMapping.h>
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKErrorMessage.h>
-#import <RestKit/ObjectMapping/RKMapperOperation.h>
-#import <RestKit/ObjectMapping/RKMappingResult.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/ObjectMapping/RKRelationshipMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKAttributeMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKErrorMessage.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingResult.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKRelationshipMapping.h>

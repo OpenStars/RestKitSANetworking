@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <RestKit/RestKit.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
 
 @interface RKTwitterViewController : UIViewController
 @end

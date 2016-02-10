@@ -6,7 +6,7 @@
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import <RestKit/RestKit.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
 #import "RKTwitterAppDelegate.h"
 #import "RKTwitterViewController.h"
 #import "RKTweet.h"
@@ -21,15 +21,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RKLogConfigureByName("RestKit/Network*", RKLogLevelTrace);
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/Network*", RKLogLevelTrace);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/ObjectMapping", RKLogLevelTrace);
 
-    //let AFNetworking manage the activity indicator
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    //let SANetworking manage the activity indicator
+    [SANetworkActivityIndicatorManager sharedManager].enabled = YES;
   
     // Initialize HTTPClient
     NSURL *baseURL = [NSURL URLWithString:@"https://twitter.com"];
-    AFHTTPClient* client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    SAHTTPClient* client = [[SAHTTPClient alloc] initWithBaseURL:baseURL];
     
     // HACK: Set User-Agent to Mac OS X so that Twitter will let us access the Timeline
     [client setDefaultHeader:@"User-Agent" value:[NSString stringWithFormat:@"%@/%@ (Mac OS X %@)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleIdentifierKey], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], [[NSProcessInfo processInfo] operatingSystemVersionString]]];

@@ -11,8 +11,8 @@ For the sample code below, imagine that we have a `Recipe` entity containing str
 Indexing is configured through the managed object store and **must** be done before the managed object contexts have been created, as the search support modifies the searchable entity to include a new relationship.
 
 ```objc
-#import <RestKit/CoreData.h>
-#import <RestKit/Search.h>
+#import <RestKitSANetworking@MindSea/CoreData.h>
+#import <RestKitSANetworking@MindSea/Search.h>
 
 // Initialize the managed object model and RestKit managed object store
 NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -34,8 +34,8 @@ Once indexing is configured, an instance of `RKSearchIndexer` will observe the p
 Searching an indexed entity is performed via a standard Core Data fetch request with a compound predicate that will match your search text against a list of search words associated with the target managed object.
 
 ```objc
-#import <RestKit/CoreData.h>
-#import <RestKit/Search.h>
+#import <RestKitSANetworking@MindSea/CoreData.h>
+#import <RestKitSANetworking@MindSea/Search.h>
 
 /* Construct the predicate.
 	
@@ -76,7 +76,7 @@ To configure an `RKEntityByAttributeCache` for indexing your application, add th
 @end
 
 // MyAppSearchIndexingDelegate.m
-#import <RestKit/CoreData/RKEntityByAttributeCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKEntityByAttributeCache.h>
 
 @interface MyAppSearchIndexingDelegate ()
 @property (nonatomic, strong) RKEntityByAttributeCache *searchWordCache;

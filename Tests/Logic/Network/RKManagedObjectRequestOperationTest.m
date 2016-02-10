@@ -1366,7 +1366,7 @@ NSSet *RKSetByRemovingSubkeypathsFromSet(NSSet *setOfKeyPaths);
 
 - (void)testThatEntityMappingUsingNilKeyPathInsideNestedMappingDoesRefetchManagedObjects
 {
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/ObjectMapping", RKLogLevelTrace);
     RKManagedObjectStore *managedObjectStore = [RKTestFactory managedObjectStore];
     RKObjectMapping *userMapping = [RKObjectMapping mappingForClass:[RKTestUser class]];
     RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"Human" inManagedObjectStore:managedObjectStore];

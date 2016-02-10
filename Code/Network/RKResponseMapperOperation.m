@@ -18,21 +18,19 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKPathMatcher.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/Network/RKResponseMapperOperation.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
-#import <RestKit/Support/RKDictionaryUtilities.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Network/RKPathMatcher.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/Support/RKDictionaryUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
 
 #ifdef _COREDATADEFINES_H
-#if __has_include("RKCoreData.h")
 #define RKCoreDataIncluded
-#import <RestKit/CoreData/RKManagedObjectMappingOperationDataSource.h>
-#endif
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectMappingOperationDataSource.h>
 #endif
 
 // Set Logging Component

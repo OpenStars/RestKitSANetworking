@@ -14,9 +14,9 @@ end
 
 def import_pods
   pod 'RestKit', :path => '.'
-  pod 'RestKit/CocoaLumberjack', :path => '.'
-  pod 'RestKit/Search', :path => '.'
-  pod 'RestKit/Testing', :path => '.'
+  pod 'RestKitSANetworking@MindSea/CocoaLumberjack', :path => '.'
+  pod 'RestKitSANetworking@MindSea/Search', :path => '.'
+  pod 'RestKitSANetworking@MindSea/Testing', :path => '.'
 
   pod 'Specta', '0.2.1'
   pod 'OCMock', '2.2.4'

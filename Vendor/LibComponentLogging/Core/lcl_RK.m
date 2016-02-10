@@ -1,6 +1,6 @@
 //
 //
-// lcl_RK.m -- LibComponentLogging, embedded, RestKit/RK
+// lcl_RK.m -- LibComponentLogging, embedded, RestKitSANetworking@MindSea/RK
 //
 //
 // Copyright (c) 2008-2012 Arne Harren <ah@0xc0.de>
@@ -23,7 +23,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <RestKit/Support/lcl_RK.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_RK.h>
 #include <string.h>
 
 

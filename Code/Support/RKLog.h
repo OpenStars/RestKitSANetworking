@@ -24,7 +24,7 @@
  @see lcl_config_components_RK.h
  @see lcl_config_logger_RK.h
  */
-#import <RestKit/Support/lcl_RK.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_RK.h>
 
 /**
  * Protocol which classes can implement to determine how RestKit log messages actually get handled.
@@ -124,10 +124,10 @@ RKlcl_log(RKLogComponent, RKlcl_vTrace, @"" __VA_ARGS__)
  Examples:
 
     // Log debugging messages from the Network component
-    RKLogConfigureByName("RestKit/Network", RKLogLevelDebug);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/Network", RKLogLevelDebug);
 
     // Log only critical messages from the Object Mapping component
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelCritical);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/ObjectMapping", RKLogLevelCritical);
  */
 #define RKLogConfigureByName(name, level)                                               \
 RKlcl_configure_by_name(name, level);
@@ -205,7 +205,7 @@ RKlcl_configure_by_name("App", level);
  (Use Option + Command + R to set Environment Variables prior to run.)
 
  For example to configure the equivalent of setting the following in code:
- RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+ RKLogConfigureByName("RestKitSANetworking@MindSea/Network", RKLogLevelTrace);
 
  Define an environment variable named 'RKLogLevel.RestKit.Network' and set its value to "Trace"
 
@@ -234,7 +234,7 @@ void RKLogValidationError(NSError *error);
  failed Core Data interaction, such as the execution of a fetch request
  or the saving of a managed object context.
 
- The error will be logged to the RestKit/CoreData component with an
+ The error will be logged to the RestKitSANetworking@MindSea/CoreData component with an
  error level of RKLogLevelError regardless of the current logging context
  at invocation time.
  */

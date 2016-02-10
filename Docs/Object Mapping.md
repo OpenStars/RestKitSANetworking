@@ -483,7 +483,7 @@ The object store is a RestKit component that handles the details of setting of a
 take a look at how this works:
 
 ```objc
-#import <RestKit/RestKit.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
 
 RKObjectManager* objectManager = [RKObjectManager managerWithBaseURL:@"http://restkit.org"];
 RKManagedObjectStore* objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
@@ -857,7 +857,7 @@ RKObjectRelationshipMapping* articleCommentsMapping = [RKObjectRelationshipMappi
 
 ### Configuring a Core Data Object Mapping
 ```objc
-#import <RestKit/RestKit.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
 
 RKObjectManager* objectManager = [RKObjectManager managerWithBaseURL:@"http://restkit.org"];
 RKManagedObjectStore* objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];

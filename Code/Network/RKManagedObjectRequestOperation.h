@@ -19,10 +19,9 @@
 //
 
 #ifdef _COREDATADEFINES_H
-#if __has_include("RKManagedObjectCaching.h")
 
-#import <RestKit/CoreData/RKManagedObjectCaching.h>
-#import <RestKit/Network/RKObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectCaching.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperation.h>
 
 /**
  `RKManagedObjectRequestOperation` is a subclass of `RKObjectRequestOperation` that implements object mapping on the response body of an `NSHTTPResponse` loaded via an `RKHTTPRequestOperation` in which the mapping targets `NSManagedObject` objects managed by Core Data.
@@ -205,5 +204,4 @@ typedef NSFetchRequest *(^RKFetchRequestBlock)(NSURL *URL);
  */
 NSArray *RKArrayOfFetchRequestFromBlocksWithURL(NSArray *fetchRequestBlocks, NSURL *URL);
 
-#endif
 #endif

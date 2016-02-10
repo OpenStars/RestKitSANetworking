@@ -21,21 +21,13 @@
 #ifndef _RESTKIT_
 #define _RESTKIT_
 
-#if __has_include("ObjectMapping.h")
-#import <RestKit/ObjectMapping.h>
-#endif
+#import <RestKitSANetworking@MindSea/ObjectMapping.h>
 
-#if __has_include("Network.h")
-#import <RestKit/Network.h>
-#endif
+#import <RestKitSANetworking@MindSea/Network.h>
 
-#if __has_include("Support.h")
-#import <RestKit/Support.h>
-#endif
+#import <RestKitSANetworking@MindSea/Support.h>
 
-#if __has_include("RKCoreData.h")
-#import <RestKit/CoreData/RKCoreData.h>
-#endif
+#import <RestKitSANetworking@MindSea/CoreData/RKCoreData.h>
 
 /**
  Set the App logging component. This header

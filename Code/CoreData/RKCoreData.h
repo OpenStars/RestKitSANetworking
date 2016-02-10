@@ -21,6 +21,6 @@
 #ifndef RestKit_RKCoreData_h
 #define RestKit_RKCoreData_h
 
-#import <RestKit/CoreData.h>
+#import <RestKitSANetworking@MindSea/CoreData.h>
 
 #endif

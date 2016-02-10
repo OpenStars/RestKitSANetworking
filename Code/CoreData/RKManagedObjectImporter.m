@@ -22,14 +22,14 @@
 #import <MobileCoreServices/UTType.h>
 #endif
 
-#import <RestKit/CoreData/RKFetchRequestManagedObjectCache.h>
-#import <RestKit/CoreData/RKInMemoryManagedObjectCache.h>
-#import <RestKit/CoreData/RKManagedObjectImporter.h>
-#import <RestKit/CoreData/RKManagedObjectMappingOperationDataSource.h>
-#import <RestKit/ObjectMapping/RKMapperOperation.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKPathUtilities.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKFetchRequestManagedObjectCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKInMemoryManagedObjectCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectImporter.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapperOperation.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKPathUtilities.h>
 
 // Set Logging Component
 #undef RKLogComponent

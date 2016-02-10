@@ -18,31 +18,29 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKObjectManager.h>
-#import <RestKit/Network/RKObjectParameterization.h>
-#import <RestKit/Network/RKObjectRequestOperation.h>
-#import <RestKit/Network/RKPaginator.h>
-#import <RestKit/Network/RKPathMatcher.h>
-#import <RestKit/Network/RKRequestDescriptor.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/Network/RKRoute.h>
-#import <RestKit/Network/RKRouteSet.h>
-#import <RestKit/Network/RKRouter.h>
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/ObjectMapping/RKRelationshipMapping.h>
-#import <RestKit/Support/RKDictionaryUtilities.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKMIMETypes.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectManager.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectParameterization.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Network/RKPaginator.h>
+#import <RestKitSANetworking@MindSea/Network/RKPathMatcher.h>
+#import <RestKitSANetworking@MindSea/Network/RKRequestDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKRoute.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouteSet.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouter.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKRelationshipMapping.h>
+#import <RestKitSANetworking@MindSea/Support/RKDictionaryUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypes.h>
 #import <objc/runtime.h>
 
 #ifdef _COREDATADEFINES_H
-#   if __has_include("RKCoreData.h")
 #       define RKCoreDataIncluded
 #       import "RKManagedObjectStore.h"
 #       import "RKManagedObjectRequestOperation.h"
-#   endif
 #endif
 
 #if !__has_feature(objc_arc)
@@ -316,29 +314,29 @@ static BOOL RKDoesArrayOfResponseDescriptorsContainMappingForClass(NSArray *resp
     return NO;
 }
 
-static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParameterEncoding encoding)
+static NSString *RKMIMETypeFromSAHTTPClientParameterEncoding(SAHTTPClientParameterEncoding encoding)
 {
     switch (encoding) {
-        case AFFormURLParameterEncoding:
+        case SAFormURLParameterEncoding:
             return RKMIMETypeFormURLEncoded;
             break;
             
-        case AFJSONParameterEncoding:
+        case SAJSONParameterEncoding:
             return RKMIMETypeJSON;
             break;
             
-        case AFPropertyListParameterEncoding:
+        case SAPropertyListParameterEncoding:
             break;
             
         default:
-            RKLogWarning(@"RestKit is unable to infer the appropriate request serialization MIME Type from an `AFHTTPClientParameterEncoding` value of %d: defaulting to `RKMIMETypeFormURLEncoded`", encoding);
+            RKLogWarning(@"RestKit is unable to infer the appropriate request serialization MIME Type from an `SAHTTPClientParameterEncoding` value of %d: defaulting to `RKMIMETypeFormURLEncoded`", encoding);
             break;
     }
     
     return RKMIMETypeFormURLEncoded;
 }
 
-@interface AFHTTPClient ()
+@interface SAHTTPClient ()
 @property (readonly, nonatomic, strong) NSURLCredential *defaultCredential;
 @end
 
@@ -364,7 +362,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
     return [self init];
 }
 
-- (instancetype)initWithHTTPClient:(AFHTTPClient *)client
+- (instancetype)initWithHTTPClient:(SAHTTPClient *)client
 {
     self = [super init];
     if (self) {
@@ -377,7 +375,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
         self.registeredHTTPRequestOperationClasses = [NSMutableArray new];
         self.registeredManagedObjectRequestOperationClasses = [NSMutableArray new];
         self.registeredObjectRequestOperationClasses = [NSMutableArray new];
-        self.requestSerializationMIMEType = RKMIMETypeFromAFHTTPClientParameterEncoding(client.parameterEncoding);        
+        self.requestSerializationMIMEType = RKMIMETypeFromSAHTTPClientParameterEncoding(client.parameterEncoding);        
 
         // Set shared manager if nil
         if (nil == sharedManager) {
@@ -400,8 +398,8 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
 
 + (RKObjectManager *)managerWithBaseURL:(NSURL *)baseURL
 {
-    RKObjectManager *manager = [[self alloc] initWithHTTPClient:[AFHTTPClient clientWithBaseURL:baseURL]];
-    [manager.HTTPClient registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    RKObjectManager *manager = [[self alloc] initWithHTTPClient:[SAHTTPClient clientWithBaseURL:baseURL]];
+    [manager.HTTPClient registerHTTPOperationClass:[SAJSONRequestOperation class]];
     [manager setAcceptHeaderWithMIMEType:RKMIMETypeJSON];
     manager.requestSerializationMIMEType = RKMIMETypeFormURLEncoded;
     return manager;
@@ -425,7 +423,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
 #pragma mark - Building Requests
 
 /**
- This method is the `RKObjectManager` analog for the method of the same name on `AFHTTPClient`.
+ This method is the `RKObjectManager` analog for the method of the same name on `SAHTTPClient`.
  */
 - (NSMutableURLRequest *)requestWithMethod:(NSString *)method
                                       path:(NSString *)path
@@ -434,7 +432,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
     NSMutableURLRequest* request;
     if (parameters && !([method isEqualToString:@"GET"] || [method isEqualToString:@"HEAD"] || [method isEqualToString:@"DELETE"])) {
         // NOTE: If the HTTP client has been subclasses, then the developer may be trying to perform signing on the request
-        NSDictionary *parametersForClient = [self.HTTPClient isMemberOfClass:[AFHTTPClient class]] ? nil : parameters;
+        NSDictionary *parametersForClient = [self.HTTPClient isMemberOfClass:[SAHTTPClient class]] ? nil : parameters;
         request = [self.HTTPClient requestWithMethod:method path:path parameters:parametersForClient];
 		
         NSError *error = nil;
@@ -515,7 +513,7 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
                                                  method:(RKRequestMethod)method
                                                    path:(NSString *)path
                                              parameters:(NSDictionary *)parameters
-                              constructingBodyWithBlock:(void (^)(id <AFMultipartFormData> formData))block
+                              constructingBodyWithBlock:(void (^)(id <SAMultipartFormData> formData))block
 {
     NSString *requestPath = (path) ? path : [[self.router URLForObject:object method:method] relativeString];
     id requestParameters = [self mergedParametersWithObject:object method:method parameters:parameters];
@@ -568,11 +566,11 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
 
 #pragma mark - Object Request Operations
 
-- (void)copyStateFromHTTPClientToHTTPRequestOperation:(AFHTTPRequestOperation *)operation
+- (void)copyStateFromHTTPClientToHTTPRequestOperation:(SAHTTPRequestOperation *)operation
 {
     operation.credential = self.HTTPClient.defaultCredential;
     operation.allowsInvalidSSLCertificate = self.HTTPClient.allowsInvalidSSLCertificate;
-#ifdef _AFNETWORKING_PIN_SSL_CERTIFICATES_
+#ifdef _SANETWORKING_PIN_SSL_CERTIFICATES_
     operation.SSLPinningMode = self.HTTPClient.defaultSSLPinningMode;
 #endif
 }
@@ -1020,13 +1018,13 @@ static NSString *RKMIMETypeFromAFHTTPClientParameterEncoding(AFHTTPClientParamet
 @end
 
 #ifdef _SYSTEMCONFIGURATION_H
-NSString *RKStringFromNetworkReachabilityStatus(AFNetworkReachabilityStatus networkReachabilityStatus)
+NSString *RKStringFromNetworkReachabilityStatus(SANetworkReachabilityStatus networkReachabilityStatus)
 {
     switch (networkReachabilityStatus) {
-        case AFNetworkReachabilityStatusNotReachable:     return @"Not Reachable";
-        case AFNetworkReachabilityStatusReachableViaWiFi: return @"Reachable via WiFi";
-        case AFNetworkReachabilityStatusReachableViaWWAN: return @"Reachable via WWAN";
-        case AFNetworkReachabilityStatusUnknown:          return @"Reachability Unknown";
+        case SANetworkReachabilityStatusNotReachable:     return @"Not Reachable";
+        case SANetworkReachabilityStatusReachableViaWiFi: return @"Reachable via WiFi";
+        case SANetworkReachabilityStatusReachableViaWWAN: return @"Reachable via WWAN";
+        case SANetworkReachabilityStatusUnknown:          return @"Reachability Unknown";
         default:                                          break;
     }
     return nil;

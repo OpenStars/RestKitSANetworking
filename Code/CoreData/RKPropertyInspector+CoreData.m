@@ -19,10 +19,10 @@
 //
 
 #import <CoreData/CoreData.h>
-#import <RestKit/CoreData/RKPropertyInspector+CoreData.h>
-#import <RestKit/ObjectMapping/RKObjectUtilities.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMacros.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKPropertyInspector+CoreData.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMacros.h>
 #import <objc/message.h>
 
 // Set Logging Component

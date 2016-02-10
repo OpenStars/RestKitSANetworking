@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Blake Watters. All rights reserved.
 //
 
-#import <RestKit/Search.h>
+#import <RestKitSANetworking@MindSea/Search.h>
 #import "RKSAppDelegate.h"
 
 @implementation RKSAppDelegate
@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Turn on logging for the Search component
-    RKLogConfigureByName("RestKit/Search", RKLogLevelTrace);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/Search", RKLogLevelTrace);
     
     // Initialize the managed object store
     // NOTE: To add search indexing an entity, the managed object model must be mutable. The `mergedModelFromBundles:` method returns an immutable model, so we must send a `mutableCopy` message to obtain a model that we can add indexing to.

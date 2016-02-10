@@ -1,5 +1,5 @@
 # Install via CocoaPods pointing at current local codebase
 use_frameworks!
-pod 'RestKit/Network', :path => '../../'
-pod 'RestKit/ObjectMapping', :path => '../../'
-pod 'RestKit/CoreData', :path => '../../'
+pod 'RestKitSANetworking@MindSea/Network', :path => '../../'
+pod 'RestKitSANetworking@MindSea/ObjectMapping', :path => '../../'
+pod 'RestKitSANetworking@MindSea/CoreData', :path => '../../'

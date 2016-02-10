@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKAttributeMapping.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKAttributeMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
 
 @class RKMappingOperation, RKDynamicMapping, RKConnectionDescription, RKMappingInfo;
 @protocol RKMappingOperationDataSource;

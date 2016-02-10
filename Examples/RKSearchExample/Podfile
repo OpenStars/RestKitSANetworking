@@ -2,6 +2,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 # Install via CocoaPods pointing at current local codebase
-pod 'RestKit/Network', :path => '../../'
-pod 'RestKit/ObjectMapping', :path => '../../'
-pod 'RestKit/Search', :path => '../../'
+pod 'RestKitSANetworking@MindSea/Network', :path => '../../'
+pod 'RestKitSANetworking@MindSea/ObjectMapping', :path => '../../'
+pod 'RestKitSANetworking@MindSea/Search', :path => '../../'

@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKObjectUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectUtilities.h>
 #import <objc/message.h>
 #import <objc/runtime.h>
 

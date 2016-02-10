@@ -18,11 +18,11 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKHTTPRequestOperation.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypes.h>
-#import <RestKit/Support/lcl_RK.h>
+#import <RestKitSANetworking@MindSea/Network/RKHTTPRequestOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypes.h>
+#import <RestKitSANetworking@MindSea/Support/lcl_RK.h>
 
 extern NSString * const RKErrorDomain;
 
@@ -39,7 +39,7 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
     return YES;
 }
 
-@interface AFURLConnectionOperation () <NSURLConnectionDataDelegate>
+@interface SAURLConnectionOperation () <NSURLConnectionDataDelegate>
 @property (readwrite, nonatomic, strong) NSRecursiveLock *lock;
 @end
 
@@ -80,7 +80,7 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
     return self.acceptableContentTypes ? RKMIMETypeInSet(contentType, self.acceptableContentTypes) : [super hasAcceptableContentType];
 }
 
-// NOTE: We reimplement this because the AFNetworking implementation keeps Acceptable Status Code/MIME Type at class level
+// NOTE: We reimplement this because the SANetworking implementation keeps Acceptable Status Code/MIME Type at class level
 - (NSError *)error
 {
     [self.lock lock];
@@ -90,8 +90,8 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
             [userInfo setValue:self.responseString forKey:NSLocalizedRecoverySuggestionErrorKey];
             [userInfo setValue:[self.request URL] forKey:NSURLErrorFailingURLErrorKey];
-            [userInfo setValue:self.request forKey:AFNetworkingOperationFailingURLRequestErrorKey];
-            [userInfo setValue:self.response forKey:AFNetworkingOperationFailingURLResponseErrorKey];
+            [userInfo setValue:self.request forKey:SANetworkingOperationFailingURLRequestErrorKey];
+            [userInfo setValue:self.response forKey:SANetworkingOperationFailingURLResponseErrorKey];
 
             if (![self hasAcceptableStatusCode]) {
                 NSUInteger statusCode = ([self.response isKindOfClass:[NSHTTPURLResponse class]]) ? (NSUInteger)[self.response statusCode] : 200;
@@ -121,7 +121,7 @@ static BOOL RKResponseRequiresContentTypeMatch(NSHTTPURLResponse *response, NSUR
 
 - (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse
 {
-    if ([AFHTTPRequestOperation instancesRespondToSelector:@selector(connection:willSendRequest:redirectResponse:)]) {
+    if ([SAHTTPRequestOperation instancesRespondToSelector:@selector(connection:willSendRequest:redirectResponse:)]) {
         NSURLRequest *returnValue = [super connection:connection willSendRequest:request redirectResponse:redirectResponse];
         if (returnValue) {
             if (redirectResponse) RKLogDebug(@"Following redirect request: %@", returnValue);

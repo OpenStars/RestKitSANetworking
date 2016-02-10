@@ -28,22 +28,22 @@
 <li>Unpack the archive wherever you like to keep libraries (the author recommends a Library subdirectory).</li>
 <li>Drag the RestKit.xcodeproj file to your Xcode project file. It will be added to the <strong>Groups &amp; Files</strong> section in the left pane of the project. Select the appropriate targets and click &#8216;Add&#8217; when the sheet appears.
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/add_to_project.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/add_to_project.png" />
 </div>
 </li>
 <li>Click on the entry for RestKit.xcodeproj in your project&#8217;s <strong>Groups &amp; Files</strong> section. In the right hand pane, find the entries for <strong>libRestKitSupport.a</strong>, <strong>libRestKitObjectMapping.a</strong>, <strong>libRestKitNetwork.a</strong>, and <strong>libRestKitJSONParserYAJL.a</strong> and click the checkboxes on the far right underneath the silver target icon. This will link your project against RestKit. If you wish to use the Core Data support, click the checkbox next to <strong>libRestKitCoreData.a</strong> also. Your project should appear something like the following screenshot:
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/linking.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/linking.png" />
 </div>
 </li>
 <li>Find the target for your application in the <strong>Targets</strong> section of your project. Right click on your app&#8217;s target and select &#8216;Get Info&#8217; from the menu to open the target Info inspector window.
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/get_info.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/get_info.png" />
 </div>
 </li>
 <li>You should be looking at the <strong>General</strong> tab of your target&#8217;s inspector. In the top <strong>Direct Dependencies</strong> section, click the plus button and add a direct dependency on the RestKit target.
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/dependency.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/dependency.png" />
 </div>
 </li>
 <li>Now look to the bottom of the <strong>General</strong> pane labeled <strong>Linked Libraries</strong>. Click the plus button to open the Frameworks selection sheet. Find and select the following frameworks and click &#8216;Add&#8217;:
@@ -54,15 +54,15 @@
 <li><strong>CoreData.framework</strong> - Required. Required for use of the Core Data backed persistent object store.
 </ol>
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/frameworks.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/frameworks.png" />
 </div>
 </li>
 <li>Switch to the &#8216;Build&#8217; tab in your project inspector. Make sure that your <strong>Configuration</strong> pop-up menu reads <strong>All Configurations</strong> so that your changes will work for all build configurations. </li>
-<li>Find the <strong>Header Search Paths</strong> setting. Double click and add a new entry. When RestKit is compiled, it will copy all relevant headers to the appropriate location under the /Build directory within the RestKit checkout. You need to add a path to the /Build directory of RestKit, relative to your project file. For example, if you checked the submodule out to the &#8216;Libraries&#8217; subdirectory of your project, your header path would be &#8216;Libraries/RestKit/Build&#8217;. 
+<li>Find the <strong>Header Search Paths</strong> setting. Double click and add a new entry. When RestKit is compiled, it will copy all relevant headers to the appropriate location under the /Build directory within the RestKit checkout. You need to add a path to the /Build directory of RestKit, relative to your project file. For example, if you checked the submodule out to the &#8216;Libraries&#8217; subdirectory of your project, your header path would be &#8216;Libraries/RestKitSANetworking@MindSea/Build&#8217;. 
 
 Now find the <strong>Other Linker Flags</strong> setting. Double click it and add entries for <strong>-all_load</strong> and <strong>-ObjC</strong>. Your setting should match the screenshot below.
 <div class="tutorial_image">
-<img src="https://mobiletuts.s3.amazonaws.com/146_RESTKit/build_settings.png" />
+<img src="https://mobiletuts.s3.amazonaws.com/146_RestKitSANetworking@MindSea/build_settings.png" />
 </div>
 </li>
 <li><p>Close out the inspector window.</p></li>
@@ -72,8 +72,8 @@ Now find the <strong>Other Linker Flags</strong> setting. Double click it and ad
 
 <p>You now only need to add includes for the RestKit libraries at the appropriate places in your application. The relevant includes are:
 <pre name="code" class="c++">  
-    #import &lt;RestKit/RestKit.h&gt;    
-    #import &lt;RestKit/CoreData/CoreData.h&gt;// If you are using Core Data&#8230;
+    #import &lt;RestKitSANetworking@MindSea/RestKit.h&gt;    
+    #import &lt;RestKitSANetworking@MindSea/CoreData/CoreData.h&gt;// If you are using Core Data&#8230;
 </pre>
 <p>
 Build the project to ensure everything is working correctly.
@@ -105,10 +105,10 @@ NSLog(@"I am your RKClient singleton : %@", [RKClient sharedClient]);
 <p>Now that you have a client configured, you can send and process HTTP requests through the client. RestKit makes this very easy for you and abstracts the low level details of NSURLConnection away from you. When making a request through the client, you supply the resource path on the remote web server that you wish to interact with. Since the most common action in an iOS application is making an asynchronous request to a remote web service, RestKit provides very straight-forward convenience methods for the HTTP verbs: GET, POST, PUT and DELETE. You only need to declare that your class implements the RKRequestDelegate protocol and then provide an implementation of the <code>request:didLoadResponse:</code> method. Let&#8217;s take a look at an example class that shows the basics:</p>
 
 <pre name="code" class="c++">
-#import &lt;RestKit/RestKit.h&gt;
+#import &lt;RestKitSANetworking@MindSea/RestKit.h&gt;
 
 // Here we declare that we implement the RKRequestDelegate protocol
-// Check out RestKit/Network/RKRequest.h for additional delegate methods
+// Check out RestKitSANetworking@MindSea/Network/RKRequest.h for additional delegate methods
 // that are available.
 @interface RKRequestExamples : NSObject &lt;RKRequestDelegate&gt; {
 }
@@ -381,7 +381,7 @@ This article has explored the basics of working with RestKit. You should now hav
 
 <ul>
 <li><a href="http://restkit.org">RestKit.org</a></li>
-<li><a href="https://github.com/RestKit/RestKit">Github Project Page</a></li>
+<li><a href="https://github.com/RestKitSANetworking@MindSea/RestKit">Github Project Page</a></li>
 <li><a href="http://groups.google.com/group/restkit">Official Google Group</a></li>
 <li><a href="http://twotoasters.com/">Two Toasters</a></li>
 </ul>

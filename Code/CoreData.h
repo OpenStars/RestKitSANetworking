@@ -19,15 +19,15 @@
 //
 
 #import <CoreData/CoreData.h>
-#import <RestKit/CoreData/RKEntityMapping.h>
-#import <RestKit/CoreData/RKFetchRequestManagedObjectCache.h>
-#import <RestKit/CoreData/RKInMemoryManagedObjectCache.h>
-#import <RestKit/CoreData/RKManagedObjectCaching.h>
-#import <RestKit/CoreData/RKManagedObjectImporter.h>
-#import <RestKit/CoreData/RKManagedObjectMappingOperationDataSource.h>
-#import <RestKit/CoreData/RKManagedObjectStore.h>
-#import <RestKit/ObjectMapping.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKEntityMapping.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKFetchRequestManagedObjectCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKInMemoryManagedObjectCache.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectCaching.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectImporter.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectStore.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping.h>
 
-#import <RestKit/CoreData/NSManagedObject+RKAdditions.h>
-#import <RestKit/CoreData/NSManagedObjectContext+RKAdditions.h>
-#import <RestKit/CoreData/RKPropertyInspector+CoreData.h>
+#import <RestKitSANetworking@MindSea/CoreData/NSManagedObject+RKAdditions.h>
+#import <RestKitSANetworking@MindSea/CoreData/NSManagedObjectContext+RKAdditions.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKPropertyInspector+CoreData.h>

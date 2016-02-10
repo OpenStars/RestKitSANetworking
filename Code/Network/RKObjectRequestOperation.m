@@ -18,20 +18,20 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKObjectRequestOperation.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/Network/RKResponseMapperOperation.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKOperationStateMachine.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKOperationStateMachine.h>
 #import <objc/runtime.h>
 
 #import <Availability.h>
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
-#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
+#import <SANetworking/SANetworkActivityIndicatorManager.h>
 #endif
 
 // Set Logging Component
@@ -106,11 +106,11 @@ static NSString *RKLogTruncateString(NSString *string)
                                                    object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(HTTPOperationDidStart:)
-                                                     name:AFNetworkingOperationDidStartNotification
+                                                     name:SANetworkingOperationDidStartNotification
                                                    object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(HTTPOperationDidFinish:)
-                                                     name:AFNetworkingOperationDidFinishNotification
+                                                     name:SANetworkingOperationDidFinishNotification
                                                    object:nil];
     }
     
@@ -196,14 +196,14 @@ NSString *const RKObjectRequestOperationMappingDidFinishUserInfoKey = @"mappingF
 static void RKIncrementNetworkActivityIndicator()
 {
     #if __IPHONE_OS_VERSION_MIN_REQUIRED
-        [[AFNetworkActivityIndicatorManager sharedManager] incrementActivityCount];
+        [[SANetworkActivityIndicatorManager sharedManager] incrementActivityCount];
     #endif
 }
 
 static void RKDecrementNetworkAcitivityIndicator()
 {
     #if __IPHONE_OS_VERSION_MIN_REQUIRED
-        [[AFNetworkActivityIndicatorManager sharedManager] decrementActivityCount];
+        [[SANetworkActivityIndicatorManager sharedManager] decrementActivityCount];
     #endif
 }
 
@@ -466,7 +466,7 @@ static NSString *RKStringDescribingURLResponseWithData(NSURLResponse *response, 
 {
     __weak __typeof(self)weakSelf = self;    
     
-    [self.HTTPRequestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self.HTTPRequestOperation setCompletionBlockWithSuccess:^(SAHTTPRequestOperation *operation, id responseObject) {
         if (weakSelf.isCancelled) {
             [weakSelf.stateMachine finish];
             return;
@@ -506,7 +506,7 @@ static NSString *RKStringDescribingURLResponseWithData(NSURLResponse *response, 
             weakSelf.mappingDidFinishDate = [NSDate date];
             [weakSelf.stateMachine finish];
         }];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(SAHTTPRequestOperation *operation, NSError *error) {
         RKLogError(@"Object request failed: Underlying HTTP request operation failed with error: %@", weakSelf.HTTPRequestOperation.error);
         weakSelf.error = weakSelf.HTTPRequestOperation.error;
         [weakSelf.stateMachine finish];

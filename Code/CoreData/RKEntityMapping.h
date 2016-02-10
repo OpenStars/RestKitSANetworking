@@ -19,9 +19,9 @@
 //
 
 #import <CoreData/CoreData.h>
-#import <RestKit/CoreData/RKConnectionDescription.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/Support/RKMacros.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKConnectionDescription.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/Support/RKMacros.h>
 
 @class RKManagedObjectStore;
 

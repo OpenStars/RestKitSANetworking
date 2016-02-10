@@ -18,17 +18,17 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKObjectManager.h>
-#import <RestKit/Network/RKObjectParameterization.h>
-#import <RestKit/Network/RKObjectRequestOperation.h>
-#import <RestKit/Network/RKPathMatcher.h>
-#import <RestKit/Network/RKRequestDescriptor.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/Network/RKRoute.h>
-#import <RestKit/Network/RKRouteSet.h>
-#import <RestKit/Network/RKRouter.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectManager.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectParameterization.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Network/RKPathMatcher.h>
+#import <RestKitSANetworking@MindSea/Network/RKRequestDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/Network/RKRoute.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouteSet.h>
+#import <RestKitSANetworking@MindSea/Network/RKRouter.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
 
 #ifdef _COREDATADEFINES_H
-#import <RestKit/Network/RKManagedObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Network/RKManagedObjectRequestOperation.h>
 #endif

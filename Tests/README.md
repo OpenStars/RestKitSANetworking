@@ -40,7 +40,7 @@ Rake is also used for a number of other automation tasks in the project. Consult
 Test Server
 -------------
 
-RestKit includes a [Sinatra](http://www.sinatrarb.com/) powered test server that is required to exercise the majority of the HTTP specific functionality within the library. Execution of the test server is handled via a rich library of Rake tasks provided by the [RestKit Gem](https://github.com/RestKit/RestKit-Gem).
+RestKit includes a [Sinatra](http://www.sinatrarb.com/) powered test server that is required to exercise the majority of the HTTP specific functionality within the library. Execution of the test server is handled via a rich library of Rake tasks provided by the [RestKit Gem](https://github.com/RestKitSANetworking@MindSea/RestKit-Gem).
 
 The server can be run interactively or daemonized into a background process. Tasks are provided for stopping, starting, restarting, tailing the logs of a backgrounded process, and for automatically starting and stopping the server via Rake task dependencies. A list of the available server tasks as of this writing (as obtained via `rake -T server`) follows:
 
@@ -55,7 +55,7 @@ The server can be run interactively or daemonized into a background process. Tas
 	rake server:status                # Check the status of the Test server daemon
 	rake server:stop                  # Stop the Test server daemon
 	
-The tasks are reusable via the RestKit gem and can be used to provide a test server for applications using RestKit as well. Details about configuring the RestKit gem to quickly build an application specific test server are available on the [RestKit Gem Github Page](https://github.com/RestKit/RestKit-Gem). An example application leveraging the test server is provided in the [RKGithub](https://github.com/RestKit/RKGithub) application.
+The tasks are reusable via the RestKit gem and can be used to provide a test server for applications using RestKit as well. Details about configuring the RestKit gem to quickly build an application specific test server are available on the [RestKit Gem Github Page](https://github.com/RestKitSANetworking@MindSea/RestKit-Gem). An example application leveraging the test server is provided in the [RKGithub](https://github.com/RestKitSANetworking@MindSea/RKGithub) application.
 
 Writing Tests
 -------------
@@ -80,7 +80,7 @@ generating warnings or requiring casting.
 
 ### RestKit Testing Classes
 
-RestKit includes a number of testing specific classes as part of the library that are used within the test suite and are also available for testing applications leveraging RestKit. This functionality is covered in detail in the [Unit Testing with RestKit](https://github.com/RestKit/RestKit/wiki/Unit-Testing-with-RestKit) article on the Github site.
+RestKit includes a number of testing specific classes as part of the library that are used within the test suite and are also available for testing applications leveraging RestKit. This functionality is covered in detail in the [Unit Testing with RestKit](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Unit-Testing-with-RestKit) article on the Github site.
 
 ### Writing Integration Tests
 
@@ -125,7 +125,7 @@ That's really all there is to it. Consult the existing test code in Tests/ for r
 Continuous Integration
 -------------
 
-**Note:** RestKit currently uses [Travis CI](https://travis-ci.org/RestKit/RestKit)
+**Note:** RestKit currently uses [Travis CI](https://travis-ci.org/RestKitSANetworking@MindSea/RestKit)
 
 The RestKit team keeps the master, development, and active branches of RestKit under the watchful eye of the [Jenkins Continuous Integration Server](http://jenkins-ci.org/). There is a fair amount of complexity involved in getting iOS projects running under Jenkins, so to make things as easy as possible all Jenkins configuration has been collected into a single script within the source code. Currently use of the Jenkins build **requires** the use of RVM for managing the Ruby environment.
 

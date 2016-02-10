@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <RestKit/RestKit.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
 
 @interface RKMacOSXAppDelegate : NSObject <NSApplicationDelegate>
 

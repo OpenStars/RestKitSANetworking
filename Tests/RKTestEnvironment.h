@@ -31,8 +31,8 @@
 #define EXP_SHORTHAND
 #import "Expecta.h"
 
-#import <RestKit/RestKit.h>
-#import <RestKit/Testing.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
+#import <RestKitSANetworking@MindSea/Testing.h>
 
 /*
  Base class for RestKit test cases. Provides initialization of testing infrastructure.

@@ -18,9 +18,9 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKObjectMappingMatcher.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingMatcher.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 
 // Set Logging Component
 #undef RKLogComponent

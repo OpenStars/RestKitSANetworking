@@ -19,22 +19,21 @@
 //
 
 #ifdef _COREDATADEFINES_H
-#if __has_include("RKManagedObjectCaching.h")
 
-#import <RestKit/CoreData/NSManagedObject+RKAdditions.h>
-#import <RestKit/CoreData/NSManagedObjectContext+RKAdditions.h>
-#import <RestKit/Network/RKManagedObjectRequestOperation.h>
-#import <RestKit/Network/RKObjectRequestOperationSubclass.h>
-#import <RestKit/Network/RKResponseMapperOperation.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
-#import <RestKit/ObjectMapping/RKObjectUtilities.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/CoreData/NSManagedObject+RKAdditions.h>
+#import <RestKitSANetworking@MindSea/CoreData/NSManagedObjectContext+RKAdditions.h>
+#import <RestKitSANetworking@MindSea/Network/RKManagedObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperationSubclass.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 
 // Graph visitor
-#import <RestKit/CoreData/RKEntityMapping.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKRelationshipMapping.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKEntityMapping.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKRelationshipMapping.h>
 
 // Set Logging Component
 #undef RKLogComponent
@@ -932,5 +931,4 @@ BOOL RKDoesArrayOfResponseDescriptorsContainOnlyEntityMappings(NSArray *response
 
 @end
 
-#endif
 #endif

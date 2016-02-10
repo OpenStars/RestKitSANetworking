@@ -19,13 +19,13 @@
 //
 
 // Load shared support code
-#import <RestKit/Support/RKDictionaryUtilities.h>
-#import <RestKit/Support/RKDotNetDateFormatter.h>
-#import <RestKit/Support/RKErrors.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKMIMETypes.h>
-#import <RestKit/Support/RKNSJSONSerialization.h>
-#import <RestKit/Support/RKPathUtilities.h>
-#import <RestKit/Support/RKStringTokenizer.h>
-#import <RestKit/Support/RKURLEncodedSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKDictionaryUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKDotNetDateFormatter.h>
+#import <RestKitSANetworking@MindSea/Support/RKErrors.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypes.h>
+#import <RestKitSANetworking@MindSea/Support/RKNSJSONSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKPathUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKStringTokenizer.h>
+#import <RestKitSANetworking@MindSea/Support/RKURLEncodedSerialization.h>

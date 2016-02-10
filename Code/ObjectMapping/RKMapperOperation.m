@@ -18,14 +18,14 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKMapperOperation.h>
-#import <RestKit/ObjectMapping/RKMapperOperation_Private.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
-#import <RestKit/Support/RKDictionaryUtilities.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapperOperation_Private.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/Support/RKDictionaryUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 
 NSString * const RKMappingErrorKeyPathErrorKey = @"keyPath";
 

@@ -19,18 +19,18 @@
 //
 
 #import <RKValueTransformers/RKValueTransformers.h>
-#import <RestKit/ObjectMapping/RKAttributeMapping.h>
-#import <RestKit/ObjectMapping/RKDynamicMapping.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/ObjectMapping/RKMappingOperation.h>
-#import <RestKit/ObjectMapping/RKMappingOperationDataSource.h>
-#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
-#import <RestKit/ObjectMapping/RKObjectUtilities.h>
-#import <RestKit/ObjectMapping/RKPropertyInspector.h>
-#import <RestKit/ObjectMapping/RKRelationshipMapping.h>
-#import <RestKit/Support/RKDictionaryUtilities.h>
-#import <RestKit/Support/RKErrors.h>
-#import <RestKit/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKAttributeMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKDynamicMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKPropertyInspector.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKRelationshipMapping.h>
+#import <RestKitSANetworking@MindSea/Support/RKDictionaryUtilities.h>
+#import <RestKitSANetworking@MindSea/Support/RKErrors.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
 #import <objc/runtime.h>
 
 // Set Logging Component
@@ -596,7 +596,7 @@ static NSArray *RKInsertInMetadataList(NSArray *list, id metadata1, id metadata2
      the circumstances that trigger it in a unit test to fix elsewhere. The proper place
      to handle it is in transformValue:atKeyPath:toType:
 
-     See issue & pull request: https://github.com/RestKit/RestKit/pull/436
+     See issue & pull request: https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/pull/436
      */
     if (*value == [NSNull null]) *value = nil;
 

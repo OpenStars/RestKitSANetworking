@@ -18,18 +18,18 @@
 //  limitations under the License.
 //
 
-#import <AFNetworking/AFHTTPClient.h>
-#import <RestKit/Network/RKObjectManager.h>
-#import <RestKit/Network/RKObjectRequestOperation.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKPathUtilities.h>
-#import <RestKit/Testing/RKTestFactory.h>
+#import <SANetworking/SAHTTPClient.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectManager.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectRequestOperation.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKPathUtilities.h>
+#import <RestKitSANetworking@MindSea/Testing/RKTestFactory.h>
 
 #ifdef _COREDATADEFINES_H
 #if __has_include("RKCoreData.h")
 #define RKCoreDataIncluded
-#import <RestKit/CoreData/RKManagedObjectStore.h>
+#import <RestKitSANetworking@MindSea/CoreData/RKManagedObjectStore.h>
 #endif
 #endif
 
@@ -113,9 +113,9 @@
 - (void)defineDefaultFactories
 {
     [self defineFactory:RKTestFactoryDefaultNamesClient withBlock:^id {
-        __block AFHTTPClient *client;
+        __block SAHTTPClient *client;
         RKLogSilenceComponentWhileExecutingBlock(RKlcl_cRestKitSupport, ^{
-            client = [AFHTTPClient clientWithBaseURL:self.baseURL];
+            client = [SAHTTPClient clientWithBaseURL:self.baseURL];
         });
 
         return client;

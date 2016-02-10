@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Blake Watters. All rights reserved.
 //
 
-#import <RestKit/Search.h>
+#import <RestKitSANetworking@MindSea/Search.h>
 #import <CoreData/CoreData.h>
 #import "RKSAppDelegate.h"
 #import "RKSViewController.h"

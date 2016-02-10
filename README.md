@@ -1,12 +1,12 @@
 # RestKit
 
-[![Build Status](http://img.shields.io/travis/RestKit/RestKit/development.svg?style=flat)](https://travis-ci.org/RestKit/RestKit)
-[![Pod Version](http://img.shields.io/cocoapods/v/RestKit.svg?style=flat)](http://cocoadocs.org/docsets/RestKit/)
-[![Pod Platform](http://img.shields.io/cocoapods/p/RestKit.svg?style=flat)](http://cocoadocs.org/docsets/RestKit/)
+[![Build Status](http://img.shields.io/travis/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/development.svg?style=flat)](https://travis-ci.org/RestKitSANetworking@MindSea/RestKit)
+[![Pod Version](http://img.shields.io/cocoapods/v/RestKit.svg?style=flat)](http://cocoadocs.org/docsets/RestKitSANetworking@MindSea/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/RestKit.svg?style=flat)](http://cocoadocs.org/docsets/RestKitSANetworking@MindSea/)
 [![Pod License](http://img.shields.io/cocoapods/l/RestKit.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Visit our IRC channel](http://img.shields.io/badge/IRC-%23RestKit-green.svg?style=flat)](https://kiwiirc.com/client/irc.freenode.net/?nick=rkuser|?&theme=basic#RestKit)
 
-RestKit is a modern Objective-C framework for implementing RESTful web services clients on iOS and Mac OS X. It provides a powerful [object mapping](https://github.com/RestKit/RestKit/wiki/Object-mapping) engine that seamlessly integrates with [Core Data](http://developer.apple.com/library/mac/#documentation/cocoa/Conceptual/CoreData/cdProgrammingGuide.html) and a simple set of networking primitives for mapping HTTP requests and responses built on top of [AFNetworking](https://github.com/AFNetworking/AFNetworking). It has an elegant, carefully designed set of APIs that make accessing and modeling RESTful resources feel almost magical. For example, here's how to access the Twitter public timeline and turn the JSON contents into an array of Tweet objects:
+RestKit is a modern Objective-C framework for implementing RESTful web services clients on iOS and Mac OS X. It provides a powerful [object mapping](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Object-mapping) engine that seamlessly integrates with [Core Data](http://developer.apple.com/library/mac/#documentation/cocoa/Conceptual/CoreData/cdProgrammingGuide.html) and a simple set of networking primitives for mapping HTTP requests and responses built on top of [SANetworking](https://github.com/SANetworking/SANetworking). It has an elegant, carefully designed set of APIs that make accessing and modeling RESTful resources feel almost magical. For example, here's how to access the Twitter public timeline and turn the JSON contents into an array of Tweet objects:
 
 ```  objective-c
 @interface RKTweet : NSObject
@@ -34,11 +34,11 @@ RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWith
 
 ## Getting Started
 
-- [Download RestKit](https://github.com/RestKit/RestKit/releases) and play with the [examples](https://github.com/RestKit/RestKit/tree/development/Examples) for iPhone and Mac OS X
-- First time with RestKit? Read the ["Overview"](#overview) section below and then check out the ["Getting Acquainted with RestKit"](https://github.com/RestKit/RKGist/blob/master/TUTORIAL.md) tutorial and [Object Mapping Reference](https://github.com/RestKit/RestKit/wiki/Object-mapping) documents in the wiki to jump right in.
-- Upgrading from RestKit 0.9.x or 0.10.x? Read the ["Upgrading to RestKit 0.20.x"](https://github.com/RestKit/RestKit/wiki/Upgrading-from-v0.10.x-to-v0.20.0) guide in the wiki
-- Adding RestKit to an existing [AFNetworking](https://github.com/AFNetworking/AFNetworking) application? Read the [AFNetworking Integration](https://github.com/RestKit/RestKit/wiki/AFNetworking-Integration) document to learn details about how the frameworks fit together.
-- Review the [source code API documentation](http://cocoadocs.org/docsets/RestKit/) for a detailed look at the classes and API's in RestKit. A great place to start is [RKObjectManager](http://restkit.org/api/latest/Classes/RKObjectManager.html).
+- [Download RestKit](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/releases) and play with the [examples](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/tree/development/Examples) for iPhone and Mac OS X
+- First time with RestKit? Read the ["Overview"](#overview) section below and then check out the ["Getting Acquainted with RestKit"](https://github.com/RestKitSANetworking@MindSea/RKGist/blob/master/TUTORIAL.md) tutorial and [Object Mapping Reference](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Object-mapping) documents in the wiki to jump right in.
+- Upgrading from RestKit 0.9.x or 0.10.x? Read the ["Upgrading to RestKit 0.20.x"](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Upgrading-from-v0.10.x-to-v0.20.0) guide in the wiki
+- Adding RestKit to an existing [SANetworking](https://github.com/SANetworking/SANetworking) application? Read the [SANetworking Integration](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/SANetworking-Integration) document to learn details about how the frameworks fit together.
+- Review the [source code API documentation](http://cocoadocs.org/docsets/RestKitSANetworking@MindSea/) for a detailed look at the classes and API's in RestKit. A great place to start is [RKObjectManager](http://restkit.org/api/latest/Classes/RKObjectManager.html).
 - Still need some help? Ask questions on [Stack Overflow](http://stackoverflow.com/questions/tagged/restkit) or the [mailing list](http://groups.google.com/group/restkit), ping us on [Twitter](http://twitter.com/RestKit) or chat with us on [IRC](https://kiwiirc.com/client/irc.freenode.net/?nick=rkuser|?&theme=basic#RestKit).
 
 ## Overview
@@ -53,14 +53,14 @@ RestKit leverages the highly dynamic Objective-C runtime to infer the developers
 
 The mapper fully supports both simple attribute as well as relationship mappings in which nested to-one or to-many child objects are mapped recursively. Through relationship mappings, one object mapping can be added to another to compose aggregate mappings that are capable of processing arbitrarily complex source documents.
 
-Object mapping is a deep topic and is explored in exhaustive detail in the [Object Mapping Guide](https://github.com/RestKit/RestKit/wiki/Object-mapping) on the wiki.
+Object mapping is a deep topic and is explored in exhaustive detail in the [Object Mapping Guide](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Object-mapping) on the wiki.
 
 ### API Quickstart
 
 RestKit is broken into several modules that cleanly separate the mapping engine from the HTTP and Core Data integrations to provide maximum flexibility. Key classes in each module are highlighted below and each module is hyperlinked to the README.md contained within the source code.
 
 <table>
-  <tr><th colspan="2" style="text-align:center;"><a href="https://github.com/RestKit/RestKit/wiki/Object-mapping">Object Mapping</a></th></tr>
+  <tr><th colspan="2" style="text-align:center;"><a href="https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Object-mapping">Object Mapping</a></th></tr>
   <tr>
     <td><a href="http://restkit.org/api/latest/Classes/RKObjectMapping.html">RKObjectMapping</a></td>
     <td>Encapsulates configuration for transforming object representations as expressed by key-value coding keypaths.</td>
@@ -370,10 +370,10 @@ article.body = @"New Body";
 ### Configure Logging
 ``` objective-c
 // Log all HTTP traffic with request and response bodies
-RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+RKLogConfigureByName("RestKitSANetworking@MindSea/Network", RKLogLevelTrace);
 
 // Log debugging info about Core Data
-RKLogConfigureByName("RestKit/CoreData", RKLogLevelDebug);
+RKLogConfigureByName("RestKitSANetworking@MindSea/CoreData", RKLogLevelDebug);
 
 // Raise logging for a block
 RKLogWithLevelWhileExecutingBlock(RKLogLevelTrace, ^{
@@ -401,7 +401,7 @@ Article *article = [Article new];
 UIImage *image = [UIImage imageNamed:@"some_image.png"];
 
 // Serialize the Article attributes then attach a file
-NSMutableURLRequest *request = [[RKObjectManager sharedManager] multipartFormRequestWithObject:article method:RKRequestMethodPOST path:nil parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+NSMutableURLRequest *request = [[RKObjectManager sharedManager] multipartFormRequestWithObject:article method:RKRequestMethodPOST path:nil parameters:nil constructingBodyWithBlock:^(id<SAMultipartFormData> formData) {
     [formData appendPartWithFileData:UIImagePNGRepresentation(image)
                                 name:@"article[image]"
                             fileName:@"photo.png"
@@ -532,7 +532,7 @@ RestKit requires [iOS 5.1.1](http://developer.apple.com/library/ios/#releasenote
 
 Several third-party open source libraries are used within RestKit, including:
 
-1. [AFNetworking](https://github.com/AFNetworking/AFNetworking) - Networking Support
+1. [SANetworking](https://github.com/SANetworking/SANetworking) - Networking Support
 2. [LibComponentLogging](http://0xc0.de/LibComponentLogging) - Logging Support
 3. [SOCKit](https://github.com/NimbusKit/sockit) - String <-> Object Coding
 4. [iso8601parser](http://boredzo.org/iso8601parser/) - Support for parsing and generating ISO-8601 dates
@@ -551,7 +551,7 @@ And the following linker flags must be set:
 
 ### ARC
 
-As of [version 0.20.0](https://github.com/RestKit/RestKit/wiki/Restkit-0.20.0), RestKit has migrated the entire codebase to ARC.
+As of [version 0.20.0](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Restkit-0.20.0), RestKit has migrated the entire codebase to ARC.
 
 If you are including the RestKit sources directly into a project that does not yet use [Automatic Reference Counting](http://clang.llvm.org/docs/AutomaticReferenceCounting.html), you will need to set the `-fobjc-arc` compiler flag on all of the RestKit source files. To do this in Xcode, go to your active target and select the "Build Phases" tab. Now select all RestKit source files, press Enter, insert `-fobjc-arc` and then "Done" to enable ARC for RestKit.
 
@@ -593,8 +593,8 @@ platform :ios, '5.0'
 pod 'RestKit', '~> 0.24.0'
 
 # Testing and Search are optional components
-pod 'RestKit/Testing', '~> 0.24.0'
-pod 'RestKit/Search',  '~> 0.24.0'
+pod 'RestKitSANetworking@MindSea/Testing', '~> 0.24.0'
+pod 'RestKitSANetworking@MindSea/Search',  '~> 0.24.0'
 ```
 
 Install into your project:
@@ -613,11 +613,11 @@ Please note that if your installation fails, it may be because you are installin
 
 ### From a Release Package or as a Git submodule
 
-Detailed installation instructions are available in the [Visual Install Guide](https://github.com/RestKit/RestKit/wiki/Installing-RestKit-v0.20.x-as-a-Git-Submodule) on the Wiki.
+Detailed installation instructions are available in the [Visual Install Guide](https://github.com/RestKitSANetworking@MindSea/RestKitSANetworking@MindSea/wiki/Installing-RestKit-v0.20.x-as-a-Git-Submodule) on the Wiki.
 
 ## Using RestKit in a Swift Project
 
-Install RestKit using one of the above methods. Then add `@import RestKit;` (if RestKit is built as a dynamic framework) or `#import <RestKit/RestKit.h>` (if RestKit is built as a static library) into the bridging header for your Swift project. To enable the Core Data functionality in RestKit, add `@import CoreData;` into your bridging header _before_ you import RestKit.
+Install RestKit using one of the above methods. Then add `@import RestKit;` (if RestKit is built as a dynamic framework) or `#import <RestKitSANetworking@MindSea/RestKit.h>` (if RestKit is built as a static library) into the bridging header for your Swift project. To enable the Core Data functionality in RestKit, add `@import CoreData;` into your bridging header _before_ you import RestKit.
 
 ## License
 

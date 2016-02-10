@@ -18,10 +18,10 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKPathMatcher.h>
-#import <RestKit/Network/RKResponseDescriptor.h>
-#import <RestKit/ObjectMapping/RKHTTPUtilities.h>
-#import <RestKit/ObjectMapping/RKMapping.h>
+#import <RestKitSANetworking@MindSea/Network/RKPathMatcher.h>
+#import <RestKitSANetworking@MindSea/Network/RKResponseDescriptor.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKHTTPUtilities.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapping.h>
 
 // Cloned from AFStringFromIndexSet -- method should be non-static for reuse
 NSString *RKStringFromIndexSet(NSIndexSet *indexSet);

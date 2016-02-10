@@ -18,9 +18,9 @@
 //  limitations under the License.
 //
 
-#import <RestKit/Network/RKHTTPRequestOperation.h>
-#import <RestKit/ObjectMapping/RKMapperOperation.h>
-#import <RestKit/ObjectMapping/RKMappingResult.h>
+#import <RestKitSANetworking@MindSea/Network/RKHTTPRequestOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapperOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingResult.h>
 
 /**
  The key for a Boolean NSNumber value that indicates if a `NSCachedURLResponse` stored in the `NSURLCache` has been object mapped to completion. This key is stored on the `userInfo` of the cached response, if any, just before an `RKObjectRequestOperation` transitions to the finished state.
@@ -34,11 +34,11 @@ extern NSString * const RKResponseHasBeenMappedCacheUserInfoKey;
  
  ## Acceptable Content Types and Status Codes
  
- Instances of `RKObjectRequestOperation` determine the acceptability of status codes and content types differently than is typical for `AFNetworking` derived network opertations. The `RKHTTPRequestOperation` (which is a subclass of the AFNetworking `AFHTTPRequestOperation` class) supports the dynamic assignment of acceptable status codes and content types. This facility is utilized during the configuration of the network operation for an object request operation. The set of acceptable content types is determined by consulting the `RKMIMETypeSerialization` via an invocation of `[RKMIMETypeSerialization registeredMIMETypes]`. The `registeredMIMETypes` method returns an `NSSet` containing either `NSString` or `NSRegularExpression` objects that specify the content types for which `RKSerialization` classes have been registered to handle. The set of acceptable status codes is determined by aggregating the value of the `statusCodes` property from all registered `RKResponseDescriptor` objects.
+ Instances of `RKObjectRequestOperation` determine the acceptability of status codes and content types differently than is typical for `SANetworking` derived network opertations. The `RKHTTPRequestOperation` (which is a subclass of the SANetworking `SAHTTPRequestOperation` class) supports the dynamic assignment of acceptable status codes and content types. This facility is utilized during the configuration of the network operation for an object request operation. The set of acceptable content types is determined by consulting the `RKMIMETypeSerialization` via an invocation of `[RKMIMETypeSerialization registeredMIMETypes]`. The `registeredMIMETypes` method returns an `NSSet` containing either `NSString` or `NSRegularExpression` objects that specify the content types for which `RKSerialization` classes have been registered to handle. The set of acceptable status codes is determined by aggregating the value of the `statusCodes` property from all registered `RKResponseDescriptor` objects.
  
  ## Error Mapping
  
- If the HTTP request returned a response in the Client Error (400-499 range) or Server Error (500-599 range) class and an appropriate `RKResponseDescriptor` is provided to perform mapping on the response, then the object mapping result is considered to contain a server returned error. In this case, an `NSError` object is created in the `RKErrorDomain` with an error code of `RKMappingErrorFromMappingResult` and the object request operation is failed. In the event that an a response is returned in an error class and no `RKResponseDescriptor` has been provided to the operation to handle it, then an `NSError` object in the `AFNetworkingErrorDomain` with an error code of `NSURLErrorBadServerResponse` will be returned by the underlying `RKHTTPRequestOperation` indicating that an unexpected status code was returned. 
+ If the HTTP request returned a response in the Client Error (400-499 range) or Server Error (500-599 range) class and an appropriate `RKResponseDescriptor` is provided to perform mapping on the response, then the object mapping result is considered to contain a server returned error. In this case, an `NSError` object is created in the `RKErrorDomain` with an error code of `RKMappingErrorFromMappingResult` and the object request operation is failed. In the event that an a response is returned in an error class and no `RKResponseDescriptor` has been provided to the operation to handle it, then an `NSError` object in the `SANetworkingErrorDomain` with an error code of `NSURLErrorBadServerResponse` will be returned by the underlying `RKHTTPRequestOperation` indicating that an unexpected status code was returned. 
  
  ## Metadata Mapping
 

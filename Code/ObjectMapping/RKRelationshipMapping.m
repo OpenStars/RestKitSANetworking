@@ -18,8 +18,8 @@
 //  limitations under the License.
 //
 
-#import <RestKit/ObjectMapping/RKMapping.h>
-#import <RestKit/ObjectMapping/RKRelationshipMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKRelationshipMapping.h>
 
 @interface RKPropertyMapping ()
 @property (nonatomic, copy, readwrite) NSString *sourceKeyPath;

@@ -52,12 +52,12 @@
 #define RKLCLComponentDefinitions \
 _RKlcl_component(App,                         "app",                              "App") \
 _RKlcl_component(RestKit,                     "restkit",                          "RestKit") \
-_RKlcl_component(RestKitCoreData,             "restkit.core_data",                "RestKit/CoreData") \
-_RKlcl_component(RestKitCoreDataCache,        "restkit.core_data.cache",          "RestKit/CoreData/Cache") \
-_RKlcl_component(RestKitNetwork,              "restkit.network",                  "RestKit/Network") \
-_RKlcl_component(RestKitNetworkCoreData,      "restkit.network.core_data",        "RestKit/Network/CoreData") \
-_RKlcl_component(RestKitObjectMapping,        "restkit.object_mapping",           "RestKit/ObjectMapping") \
-_RKlcl_component(RestKitSearch,               "restkit.search",                   "RestKit/Search") \
-_RKlcl_component(RestKitSupport,              "restkit.support",                  "RestKit/Support") \
-_RKlcl_component(RestKitTesting,              "restkit.testing",                  "RestKit/Testing") \
-_RKlcl_component(RestKitUI,                   "restkit.ui",                       "RestKit/UI")
+_RKlcl_component(RestKitCoreData,             "restkit.core_data",                "RestKitSANetworking@MindSea/CoreData") \
+_RKlcl_component(RestKitCoreDataCache,        "restkit.core_data.cache",          "RestKitSANetworking@MindSea/CoreData/Cache") \
+_RKlcl_component(RestKitNetwork,              "restkit.network",                  "RestKitSANetworking@MindSea/Network") \
+_RKlcl_component(RestKitNetworkCoreData,      "restkit.network.core_data",        "RestKitSANetworking@MindSea/Network/CoreData") \
+_RKlcl_component(RestKitObjectMapping,        "restkit.object_mapping",           "RestKitSANetworking@MindSea/ObjectMapping") \
+_RKlcl_component(RestKitSearch,               "restkit.search",                   "RestKitSANetworking@MindSea/Search") \
+_RKlcl_component(RestKitSupport,              "restkit.support",                  "RestKitSANetworking@MindSea/Support") \
+_RKlcl_component(RestKitTesting,              "restkit.testing",                  "RestKitSANetworking@MindSea/Testing") \
+_RKlcl_component(RestKitUI,                   "restkit.ui",                       "RestKitSANetworking@MindSea/UI")

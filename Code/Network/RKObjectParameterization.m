@@ -19,16 +19,16 @@
 //
 
 #import <RKValueTransformers/RKValueTransformers.h>
-#import <RestKit/Network/RKObjectParameterization.h>
-#import <RestKit/ObjectMapping/RKMappingErrors.h>
-#import <RestKit/ObjectMapping/RKMappingOperation.h>
-#import <RestKit/ObjectMapping/RKObjectMapping.h>
-#import <RestKit/ObjectMapping/RKObjectMappingOperationDataSource.h>
-#import <RestKit/ObjectMapping/RKPropertyInspector.h>
-#import <RestKit/Support/RKLog.h>
-#import <RestKit/Support/RKMIMETypeSerialization.h>
-#import <RestKit/Support/RKMIMETypes.h>
-#import <RestKit/Support/RKSerialization.h>
+#import <RestKitSANetworking@MindSea/Network/RKObjectParameterization.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingErrors.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKMappingOperation.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMapping.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKObjectMappingOperationDataSource.h>
+#import <RestKitSANetworking@MindSea/ObjectMapping/RKPropertyInspector.h>
+#import <RestKitSANetworking@MindSea/Support/RKLog.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypeSerialization.h>
+#import <RestKitSANetworking@MindSea/Support/RKMIMETypes.h>
+#import <RestKitSANetworking@MindSea/Support/RKSerialization.h>
 
 // Set Logging Component
 #undef RKLogComponent

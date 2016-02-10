@@ -6,8 +6,8 @@
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
+#import <RestKitSANetworking@MindSea/CoreData.h>
 #import "RKTwitterAppDelegate.h"
 #import "RKTwitterViewController.h"
 #import "RKTweet.h"
@@ -29,7 +29,7 @@
     [objectManager.HTTPClient setDefaultHeader:@"User-Agent" value:[NSString stringWithFormat:@"%@/%@ (Mac OS X %@)", [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleIdentifierKey], [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] ?: [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleVersionKey], [[NSProcessInfo processInfo] operatingSystemVersionString]]];
 
     // Enable Activity Indicator Spinner
-    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    [SANetworkActivityIndicatorManager sharedManager].enabled = YES;
 
     // Initialize managed object store
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -89,8 +89,8 @@
     //  2) Source JSON files are added to the 'Generate Seed Database' target to be copied into the bundle. This is required
     //      so that the object seeder can find the files when run in the simulator.    
 #ifdef RESTKIT_GENERATE_SEED_DB
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelInfo);
-    RKLogConfigureByName("RestKit/CoreData", RKLogLevelTrace);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/ObjectMapping", RKLogLevelInfo);
+    RKLogConfigureByName("RestKitSANetworking@MindSea/CoreData", RKLogLevelTrace);
     
     NSError *error = nil;
     BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);

@@ -6,8 +6,8 @@
 //  Copyright (c) 2009-2012 RestKit. All rights reserved.
 //
 
-#import <RestKit/RestKit.h>
-#import <RestKit/CoreData.h>
+#import <RestKitSANetworking@MindSea/RestKit.h>
+#import <RestKitSANetworking@MindSea/CoreData.h>
 
 @interface RKTweet : NSManagedObject
 
